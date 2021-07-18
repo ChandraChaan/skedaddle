@@ -5,5 +5,6 @@ abstract class Routes {
   static const login = '/login';
   static const getStartedImage = '/getStartedImage';
   static const regCart = '/regCart';
+  static const upcomingEvents = '/upcomingEvents';
 
 }
