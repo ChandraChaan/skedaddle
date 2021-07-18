@@ -35,7 +35,7 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return themeBody(
-      title: Text('Register Now', style: TextStyle(color: Colors.white,fontSize: 23),),
+      title: Text('Register Now', style: TextStyle(color: Colors.white,fontSize: 18),),
         // assetmage: ,
         body: Padding(
       padding: const EdgeInsets.only(left: 28, top: 25, right: 28),
@@ -228,6 +228,7 @@ class _RegisterState extends State<Register> {
             height: 50,
             width: MediaQuery.of(context).size.width ,
             child: themeButton(
+              roundedBorder: true,
               name:  'Continue',
               onClick: () {
 

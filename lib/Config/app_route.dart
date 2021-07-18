@@ -4,5 +4,6 @@ abstract class Routes {
   static const register = '/register';
   static const login = '/login';
   static const getStartedImage = '/getStartedImage';
+  static const regCart = '/regCart';
 
 }

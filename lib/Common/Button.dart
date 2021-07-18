@@ -27,7 +27,7 @@ class themeButton extends StatelessWidget {
             //   color: borderColor == null ? Colors.teal[700]:borderColor,
             // ),
             borderRadius: roundedBorder == true ? BorderRadius.all(Radius.circular(30)): BorderRadius.all(Radius.circular(12))),
-        height: 57,
+        height: 60,
         width: MediaQuery.of(context).size.width,
         child: Center(
             child: Text(
