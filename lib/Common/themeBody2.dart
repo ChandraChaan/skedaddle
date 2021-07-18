@@ -18,7 +18,7 @@ class themeBody2 extends StatelessWidget {
               begin: Alignment.topLeft,
               end: Alignment.topRight,
               // List: [Color(0xFF04EFB0),Color(0xFF3E214B),Color(0xFF281531),]
-              // colors: [Color(0xFF04EFB0),Color(0xFF3E214B),Color(0xFF281531),]
+              colors: [Color(0xFF04EFB0),Color(0xFF3E214B),Color(0xFF281531),]
           ),
 
         ),

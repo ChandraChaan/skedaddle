@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skedaddle/Common/themeBody.dart';
 import 'package:skedaddle/Common/themeBody2.dart';
 import '../../Common/Button.dart';
 import '../../Common/textField.dart';
@@ -33,7 +34,9 @@ class _RegisterState extends State<Register> {
 
   @override
   Widget build(BuildContext context) {
-    return themeBody2(
+    return themeBody(
+      title: Text('Register Now', style: TextStyle(color: Colors.white,fontSize: 23),),
+        // assetmage: ,
         body: Padding(
       padding: const EdgeInsets.only(left: 28, top: 25, right: 28),
       child: SingleChildScrollView(

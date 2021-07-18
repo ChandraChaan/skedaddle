@@ -27,8 +27,8 @@ class _RegisterNowState extends State<RegisterNow> {
           gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              List: [Color(0xFF04EFB0),Color(0xFF3E214B),Color(0xFF3E214B),Color(0xFF110D1D),Color(0xFF110D1D),Color(0xFF110D1D),]
-              // colors: [Color(0xFF04EFB0),Color(0xFF3E214B),Color(0xFF3E214B),Color(0xFF110D1D),Color(0xFF110D1D),Color(0xFF110D1D),]
+              // List: [Color(0xFF04EFB0),Color(0xFF3E214B),Color(0xFF3E214B),Color(0xFF110D1D),Color(0xFF110D1D),Color(0xFF110D1D),]
+              colors: [Color(0xFF04EFB0),Color(0xFF3E214B),Color(0xFF3E214B),Color(0xFF110D1D),Color(0xFF110D1D),Color(0xFF110D1D),]
           ),
 
         ),
