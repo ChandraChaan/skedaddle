@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:skedaddle/Common/Button.dart';
 import 'package:skedaddle/Common/textField.dart';
@@ -46,7 +47,7 @@ class _loginPageState extends State<loginPage> {
                         child: Image.asset('images/logo.png')),
                   )),
               Expanded(
-                flex: 6,
+                flex: 8,
                 child: Container(
                   child: Padding(
                     padding: const EdgeInsets.all(23.0),
@@ -106,55 +107,95 @@ class _loginPageState extends State<loginPage> {
                                       builder: (context) => forgetPassword()),
                                 );
                               },
-                              child: Text('Forgot password?',style:TextStyle(fontSize: 16, color: UiWhiteColor))),
+                              child: Text('Forgot password?',
+                                  style: TextStyle(
+                                      fontSize: 16, color: UiWhiteColor))),
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Container(
                               height: 2,
-                              width: getWidth(context)/2.7, // Thickness
+                              width: getWidth(context) / 2.7, // Thickness
                               // height: double.infinity,
                               color: Colors.grey,
                             ),
-                            Text("OR",style:TextStyle(fontSize: 16, color: UiWhiteColor)),
+                            Text("OR",
+                                style: TextStyle(
+                                    fontSize: 16, color: UiWhiteColor)),
                             Container(
                               height: 2,
-                              width: getWidth(context)/2.7, // Thickness
+                              width: getWidth(context) / 2.7, // Thickness
                               // height: double.infinity,
                               color: Colors.grey,
                             ),
                           ],
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Text("Sign in with",style:TextStyle(fontSize: 16, color: UiWhiteColor)),
+                        Align(
+                            alignment: Alignment.center,
+                            child: Text("Sign in with",
+                                style: TextStyle(
+                                    fontSize: 16, color: UiWhiteColor))),
+                        SizedBox(height: 10,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              height: 60,
+                              width: 60,
+                             child: Image.asset('icons/facebbok.png',),
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.all(Radius.circular(30))),
+                            ),
+                            SizedBox(width: 10),
+                            Container(
+                              height: 60,
+                              width: 60,
+                              child: Image.asset('icons/google.png'),
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.all(Radius.circular(30))),
+                            ),
+                          ],
                         ),
-                        TextButton(
-                          style: TextButton.styleFrom(
-                            textStyle: const TextStyle(fontSize: 16),
-                          ),
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => SignUp()),
-                            );
-                          },
-                          child: const Text('Sign up'),
+                        SizedBox(height: 10,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Row(
+                              children: [
+                                Text('Don\'t have an account?',
+                                    style: TextStyle(
+                                        fontSize: 16, color: UiWhiteColor)),
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => SignUp()),
+                                    );
+                                  },
+                                  child: Text('Sign up',
+                                      style: TextStyle(
+                                          fontSize: 16, color: UiGreenColor, fontWeight: FontWeight.bold)),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
-                        TextButton(
-                          style: TextButton.styleFrom(
-                            textStyle: const TextStyle(fontSize: 16),
-                          ),
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Profile()),
-                            );
-                          },
-                          child: const Text('Profile'),
-                        ),
+                        // TextButton(
+                        //   style: TextButton.styleFrom(
+                        //     textStyle: const TextStyle(fontSize: 16),
+                        //   ),
+                        //   onPressed: () {
+                        //     Navigator.push(
+                        //       context,
+                        //       MaterialPageRoute(
+                        //           builder: (context) => Profile()),
+                        //     );
+                        //   },
+                        //   child: const Text('Profile'),
+                        // ),
                       ],
                     ),
                   ),
