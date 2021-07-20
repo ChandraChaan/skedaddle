@@ -10,7 +10,7 @@ import 'package:skedaddle/Presantation/signup.dart';
 
 part 'app_route.dart';
 class AppPages {
-  static const INITIAL = Routes.regCart;
+  static const INITIAL = Routes.signup;
   static final routes = [
     GetPage(
         name: Routes.DEFAULT,
@@ -30,5 +30,9 @@ class AppPages {
     GetPage(
         name: Routes.upcomingEvents,
         page: () => UpcomingEventsInfo()),
+    GetPage(
+        name: Routes.signup,
+        page: () => SignUp()),
+
   ];
 }
