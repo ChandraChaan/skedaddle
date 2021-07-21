@@ -23,7 +23,7 @@ class _forgetPasswordState extends State<forgetPassword> {
     height: getHeight(context),
     decoration: new BoxDecoration(
     image: new DecorationImage(
-    image: ExactAssetImage('images/runnigImage.png'),
+    image: ExactAssetImage('assets/images/runnigImage.png'),
     fit: BoxFit.fitHeight,
     ),
     ),

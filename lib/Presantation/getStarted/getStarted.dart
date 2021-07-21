@@ -16,7 +16,7 @@ class GetStartedImage extends StatelessWidget {
         height: getHeight(context),
         decoration: new BoxDecoration(
           image: new DecorationImage(
-            image: ExactAssetImage('images/getstarted.png'),
+            image: AssetImage('assets/images/getstarted.png'),
             fit: BoxFit.fitHeight,
           ),
         ),
@@ -33,7 +33,7 @@ class GetStartedImage extends StatelessWidget {
                     alignment: Alignment.topCenter,
                     child: Container(
                         width: getWidth(context) / 2,
-                        child: Image.asset('images/logo.png')),
+                        child: Image.asset('assets/images/logo.png')),
                   ),
                 ),
                 Expanded(

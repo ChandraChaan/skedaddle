@@ -26,7 +26,7 @@ class _SignUpState extends State<SignUp> {
             height: getHeight(context),
             decoration: new BoxDecoration(
               image: new DecorationImage(
-                image: ExactAssetImage('images/runnigImage.png'),
+                image: ExactAssetImage('assets/images/runnigImage.png'),
                 fit: BoxFit.fitHeight,
               ),
             ),
@@ -42,7 +42,7 @@ class _SignUpState extends State<SignUp> {
                       alignment: Alignment.topCenter,
                       child: Container(
                           width: getWidth(context) / 2,
-                          child: Image.asset('images/logo.png')),
+                          child: Image.asset('assets/images/logo.png')),
                     )),
                 SizedBox(
                   height: 30,
@@ -177,7 +177,7 @@ class _SignUpState extends State<SignUp> {
                 Container(
                   height: 60,
                   width: 60,
-                  child: Image.asset('icons/facebbok.png',),
+                  child: Image.asset('assets/icons/facebbok.png',),
                   decoration: BoxDecoration(
                       color: UiWhiteColor,
                       borderRadius: BorderRadius.all(Radius.circular(30))),
@@ -186,7 +186,7 @@ class _SignUpState extends State<SignUp> {
                 Container(
                   height: 60,
                   width: 60,
-                  child: Image.asset('icons/google.png'),
+                  child: Image.asset('assets/icons/google.png'),
                   decoration: BoxDecoration(
                       color: UiWhiteColor,
                       borderRadius: BorderRadius.all(Radius.circular(30))),
@@ -195,7 +195,7 @@ class _SignUpState extends State<SignUp> {
                 Container(
                   height: 60,
                   width: 60,
-                  child: Image.asset('icons/google.png'),
+                  child: Image.asset('assets/icons/google.png'),
                   decoration: BoxDecoration(
                       color: UiWhiteColor,
                       borderRadius: BorderRadius.all(Radius.circular(30))),

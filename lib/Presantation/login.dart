@@ -30,7 +30,7 @@ class _loginPageState extends State<loginPage> {
           height: getHeight(context),
           decoration: new BoxDecoration(
             image: new DecorationImage(
-              image: ExactAssetImage('images/runnigImage.png'),
+              image: ExactAssetImage('assets/images/runnigImage.png'),
               fit: BoxFit.fitHeight,
             ),
           ),
@@ -46,7 +46,7 @@ class _loginPageState extends State<loginPage> {
                     alignment: Alignment.topCenter,
                     child: Container(
                         width: getWidth(context) / 2,
-                        child: Image.asset('images/logo.png')),
+                        child: Image.asset('assets/images/logo.png')),
                   )),
               Expanded(
                 flex: 8,
@@ -148,7 +148,7 @@ class _loginPageState extends State<loginPage> {
                             Container(
                               height: 60,
                               width: 60,
-                             child: Image.asset('icons/facebbok.png',),
+                             child: Image.asset('assets/icons/facebbok.png',),
                               decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.all(Radius.circular(30))),
@@ -157,7 +157,7 @@ class _loginPageState extends State<loginPage> {
                             Container(
                               height: 60,
                               width: 60,
-                              child: Image.asset('icons/google.png'),
+                              child: Image.asset('assets/icons/google.png'),
                               decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.all(Radius.circular(30))),
