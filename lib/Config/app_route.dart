@@ -8,5 +8,6 @@ abstract class Routes {
   static const upcomingEvents = '/upcomingEvents';
   static const signup = '/signup';
   static const forgetPassword = '/forgetPassword';
+  static const eventsPage = '/eventsPage';
 
 }
