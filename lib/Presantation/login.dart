@@ -57,6 +57,7 @@ class _loginPageState extends State<loginPage> {
                         Text(
                           "Login",
                           style: TextStyle(
+                              // fontFamily: 'RobotoMono',
                               color: UiWhiteColor,
                               fontWeight: FontWeight.bold,
                               fontSize: NormalHeading),

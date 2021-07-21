@@ -17,15 +17,15 @@ class themeButton extends StatelessWidget {
       onTap: onClick,
       child: Container(
         decoration: BoxDecoration(
-            gradient: LinearGradient(
+            gradient: fillColor == true ? LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.topRight,
                 colors: [Color(0xFF3E214B),Color(0xFF06E3A8)]
-            ),
+            ) : null,
             // color: fillColor == true ? Colors.teal[700] : null,
-            // border: Border.all(
-            //   color: borderColor == null ? Colors.teal[700]:borderColor,
-            // ),
+            border: borderColor == null ? null : Border.all(
+              color: borderColor,
+            ),
             borderRadius: roundedBorder == true ? BorderRadius.all(Radius.circular(30)): BorderRadius.all(Radius.circular(12))),
         height: 60,
         width: MediaQuery.of(context).size.width,
