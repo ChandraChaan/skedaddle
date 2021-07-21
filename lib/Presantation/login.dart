@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:skedaddle/Common/Button.dart';
 import 'package:skedaddle/Common/textField.dart';
+import 'package:skedaddle/Config/app_pages.dart';
 import 'package:skedaddle/Presantation/profile.dart';
 import 'package:skedaddle/Presantation/signup.dart';
 import 'package:skedaddle/Utils/colors.dart';
@@ -92,7 +94,9 @@ class _loginPageState extends State<loginPage> {
                           width: MediaQuery.of(context).size.width,
                           child: themeButton(
                             name: 'Login',
-                            onClick: () {},
+                            onClick: () {
+                              Get.toNamed(Routes.eventsPage);
+                            },
                           ),
                         ),
                         SizedBox(

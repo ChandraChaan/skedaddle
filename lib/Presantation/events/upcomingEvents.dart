@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:skedaddle/Common/Button.dart';
+import 'package:skedaddle/Config/app_pages.dart';
+
 class UpcomingEventsInfo extends StatefulWidget {
   @override
   _UpcomingEventsInfoState createState() => _UpcomingEventsInfoState();
@@ -20,18 +23,25 @@ class _UpcomingEventsInfoState extends State<UpcomingEventsInfo> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 55.0),
-                child: Text("How Many days are left to sign up for this event",
-                  style: TextStyle(color: Colors.white,fontSize: 24.0,fontWeight: FontWeight.bold),
+                child: Text(
+                  "How Many days are left to sign up for this event",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24.0,
+                      fontWeight: FontWeight.bold),
                 ),
               ),
               SizedBox(
                 height: 10.0,
               ),
-
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Text("Lorem Ipsum has been the industry's standard and typesetting industry.Lorem Ipsum",
-                  style: TextStyle(color: Colors.white,fontSize: 16.0,),
+                child: Text(
+                  "Lorem Ipsum has been the industry's standard and typesetting industry.Lorem Ipsum",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16.0,
+                  ),
                 ),
               ),
               SizedBox(
@@ -39,25 +49,38 @@ class _UpcomingEventsInfoState extends State<UpcomingEventsInfo> {
               ),
               Container(
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(25)),
+                  borderRadius: BorderRadius.all(Radius.circular(25)),
                   gradient: LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
-
-                      colors: [Color(0xFF3E214B),Color(0xFF3E214B),Color(0xFF04EFB0),Color(0xFF04EFB0),]
-                  ),
-
+                      colors: [
+                        Color(0xFF3E214B),
+                        Color(0xFF3E214B),
+                        Color(0xFF04EFB0),
+                        Color(0xFF04EFB0),
+                      ]),
                 ),
-
-                width: MediaQuery.of(context).size.width/1.1,
+                width: MediaQuery.of(context).size.width / 1.1,
                 height: 100.0,
                 child: Row(
                   children: [
-                    Text("Photos",style: TextStyle(color: Colors.white,fontSize: 16.0,),),
+                    Text(
+                      "Photos",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16.0,
+                      ),
+                    ),
                     SizedBox(
                       width: 20.0,
                     ),
-                    Text("Logo",style: TextStyle(color: Colors.white,fontSize: 16.0,),),
+                    Text(
+                      "Logo",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16.0,
+                      ),
+                    ),
                     SizedBox(
                       width: 20.0,
                     ),
@@ -65,11 +88,23 @@ class _UpcomingEventsInfoState extends State<UpcomingEventsInfo> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text("234.00",style: TextStyle(color: Colors.white,fontSize: 22.0,),),
+                        Text(
+                          "234.00",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 22.0,
+                          ),
+                        ),
                         SizedBox(
                           height: 8.0,
                         ),
-                        Text("in Prize Pool",style: TextStyle(color: Colors.white,fontSize: 16.0,),),
+                        Text(
+                          "in Prize Pool",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16.0,
+                          ),
+                        ),
                       ],
                     ),
                   ],
@@ -80,12 +115,12 @@ class _UpcomingEventsInfoState extends State<UpcomingEventsInfo> {
               ),
               Container(
                 height: 60,
-                width: MediaQuery.of(context).size.width/1.1 ,
+                width: MediaQuery.of(context).size.width / 1.1,
                 child: themeButton(
                   roundedBorder: true,
-                  name:  'Sign Up',
+                  name: 'Sign Up',
                   onClick: () {
-
+                    Get.toNamed(Routes.registernow);
                   },
                 ),
               ),
@@ -95,7 +130,6 @@ class _UpcomingEventsInfoState extends State<UpcomingEventsInfo> {
             ],
           ),
         ),
-
       ),
     );
   }

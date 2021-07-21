@@ -12,11 +12,11 @@ import 'package:skedaddle/Presantation/signup.dart';
 
 part 'app_route.dart';
 class AppPages {
-  static const INITIAL = Routes.eventsPage;
+  static const INITIAL = Routes.DEFAULT;
   static final routes = [
     GetPage(
         name: Routes.DEFAULT,
-        page: () => loginPage()),
+        page: () => GetStartedImage()),
     GetPage(
         name: Routes.getStartedImage,
         page: () => GetStartedImage()),
@@ -41,6 +41,12 @@ class AppPages {
     GetPage(
         name: Routes.eventsPage,
         page: () => EventsPage()),
+    GetPage(
+        name: Routes.registernow,
+        page: () => RegisterNow()),
+    GetPage(
+        name: Routes.successpayment,
+        page: () => SuccessPayment()),
 
   ];
 }

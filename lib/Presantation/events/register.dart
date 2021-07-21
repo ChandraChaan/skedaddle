@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:skedaddle/Common/themeBody.dart';
 import 'package:skedaddle/Common/themeBody2.dart';
+import 'package:skedaddle/Config/app_pages.dart';
 import '../../Common/Button.dart';
 import '../../Common/textField.dart';
 
@@ -10,7 +12,6 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
-
   double height = 34;
 
   double Heighty = 16.0;
@@ -35,226 +36,225 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return themeBody(
-      title: Text('Register Now', style: TextStyle(color: Colors.white,fontSize: 18),),
+        title: Text(
+          'Register Now',
+          style: TextStyle(color: Colors.white, fontSize: 18),
+        ),
         // assetmage: ,
         body: Padding(
-      padding: const EdgeInsets.only(left: 28, top: 25, right: 28),
-      child: SingleChildScrollView(
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-
-            children: [
-          Padding(
-            padding: const EdgeInsets.only(left:2.0),
-            child: Text(
-              'Shipping Address',
-              style: TextStyle(color: Color(0xFF04EFB0),fontSize: 24.0,fontWeight:FontWeight.bold),
-            ),
-          ),
-          SizedBox(
-            height: 10.0,
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-
-              Text(
-                'Full Name*',
-                style: TextStyle(color: Colors.white,fontSize: 18.0),
-              ),
-              SizedBox(
-                height: smHeighty,
-              ),
-              Container(
-                child: formText(
-                    '', '', tickid, 'n', false),
-                height: 50,
-                width: MediaQuery.of(context).size.width,
-                // color: Colors.yellowAccent,
-              ),
-            ],
-          ),
-          SizedBox(
-            height: Heighty,
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Address*',
-                style: TextStyle(color: Colors.white,fontSize: 18.0),
-              ),
-              SizedBox(
-                height: smHeighty,
-              ),
-              Container(
-                child: formText(
-                    '', '', remaerk, 'n', false),
-                height: 50,
-                width: MediaQuery.of(context).size.width,
-                // color: Colors.yellowAccent,
-              ),
-            ],
-          ),
-          SizedBox(
-            height: Heighty,
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Address2*',
-                style: TextStyle(color: Colors.white,fontSize: 18.0),
-              ),
-              SizedBox(
-                height: smHeighty,
-              ),
-              Container(
-                child: formText(
-                    '', '', tickid, 'n', false),
-                height: 50,
-                width: MediaQuery.of(context).size.width,
-                // color: Colors.yellowAccent,
-              ),
-            ],
-          ),
-          SizedBox(
-            height: Heighty,
-          ),
-              Column(
+          padding: const EdgeInsets.only(left: 28, top: 25, right: 28),
+          child: SingleChildScrollView(
+            child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Country*',
-                    style: TextStyle(color: Colors.white,fontSize: 18.0),
-                  ),
-                  SizedBox(
-                    height: smHeighty,
-                  ),
-                  Container(
-                    child: formText(
-                        '', '', remaerk, 'n', false),
-                    height: 50,
-                    width: MediaQuery.of(context).size.width,
-                    // color: Colors.yellowAccent,
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: Heighty,
-              ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Zip Code*',
-                style: TextStyle(color: Colors.white,fontSize: 18.0),
-              ),
-              SizedBox(
-                height: smHeighty,
-              ),
-              Container(
-                child: formText(
-                    '', '', remaerk, 'n', false),
-                height: 50,
-                width: MediaQuery.of(context).size.width,
-                // color: Colors.yellowAccent,
-              ),
-            ],
-          ),
-          SizedBox(
-            height: Heighty,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Column(
-                children: [
                   Padding(
-                    padding: const EdgeInsets.only(right:100.0),
+                    padding: const EdgeInsets.only(left: 2.0),
                     child: Text(
-                      'City*',
-                      style: TextStyle(color: Colors.white,fontSize: 18.0),
+                      'Shipping Address',
+                      style: TextStyle(
+                          color: Color(0xFF04EFB0),
+                          fontSize: 24.0,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
                   SizedBox(
-                    height: smHeighty,
+                    height: 10.0,
                   ),
-                  Container(
-                    child: formText(
-                        '', '', remaerk, 'n', false),
-                    height: 50,
-                    width: MediaQuery.of(context).size.width/2.5,
-                    // color: Colors.yellowAccent,
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                       Padding(
-                         padding: const EdgeInsets.only(right:100.0),
-                         child: Text(
-                          'State*',
-                          style: TextStyle(color: Colors.white,fontSize: 18.0),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Full Name*',
+                        style: TextStyle(color: Colors.white, fontSize: 18.0),
                       ),
-                       ),
-
-
+                      SizedBox(
+                        height: smHeighty,
+                      ),
+                      Container(
+                        child: formText('', '', tickid, 'n', false),
+                        height: 50,
+                        width: MediaQuery.of(context).size.width,
+                        // color: Colors.yellowAccent,
+                      ),
+                    ],
+                  ),
                   SizedBox(
-                    height: smHeighty,
+                    height: Heighty,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Address*',
+                        style: TextStyle(color: Colors.white, fontSize: 18.0),
+                      ),
+                      SizedBox(
+                        height: smHeighty,
+                      ),
+                      Container(
+                        child: formText('', '', remaerk, 'n', false),
+                        height: 50,
+                        width: MediaQuery.of(context).size.width,
+                        // color: Colors.yellowAccent,
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: Heighty,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Address2*',
+                        style: TextStyle(color: Colors.white, fontSize: 18.0),
+                      ),
+                      SizedBox(
+                        height: smHeighty,
+                      ),
+                      Container(
+                        child: formText('', '', tickid, 'n', false),
+                        height: 50,
+                        width: MediaQuery.of(context).size.width,
+                        // color: Colors.yellowAccent,
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: Heighty,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Country*',
+                        style: TextStyle(color: Colors.white, fontSize: 18.0),
+                      ),
+                      SizedBox(
+                        height: smHeighty,
+                      ),
+                      Container(
+                        child: formText('', '', remaerk, 'n', false),
+                        height: 50,
+                        width: MediaQuery.of(context).size.width,
+                        // color: Colors.yellowAccent,
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: Heighty,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Zip Code*',
+                        style: TextStyle(color: Colors.white, fontSize: 18.0),
+                      ),
+                      SizedBox(
+                        height: smHeighty,
+                      ),
+                      Container(
+                        child: formText('', '', remaerk, 'n', false),
+                        height: 50,
+                        width: MediaQuery.of(context).size.width,
+                        // color: Colors.yellowAccent,
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: Heighty,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(right: 100.0),
+                            child: Text(
+                              'City*',
+                              style: TextStyle(
+                                  color: Colors.white, fontSize: 18.0),
+                            ),
+                          ),
+                          SizedBox(
+                            height: smHeighty,
+                          ),
+                          Container(
+                            child: formText('', '', remaerk, 'n', false),
+                            height: 50,
+                            width: MediaQuery.of(context).size.width / 2.5,
+                            // color: Colors.yellowAccent,
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(right: 100.0),
+                            child: Text(
+                              'State*',
+                              style: TextStyle(
+                                  color: Colors.white, fontSize: 18.0),
+                            ),
+                          ),
+                          SizedBox(
+                            height: smHeighty,
+                          ),
+                          Container(
+                            child: formText('', '', remaerk, 'n', false),
+                            height: 50,
+                            width: MediaQuery.of(context).size.width / 2.5,
+                            // color: Colors.yellowAccent,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20.0,
                   ),
                   Container(
-                    child: formText(
-                        '', '', remaerk, 'n', false),
                     height: 50,
-                    width: MediaQuery.of(context).size.width/2.5,
-                    // color: Colors.yellowAccent,
+                    width: MediaQuery.of(context).size.width,
+                    child: themeButton(
+                      roundedBorder: true,
+                      name: 'Continue',
+                      onClick: () {
+                        Get.toNamed(Routes.regCart);
+                      },
+                    ),
                   ),
-                ],
-              ),
-            ],
+                  SizedBox(
+                    height: 16.0,
+                  ),
+                  new SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    height: 58.0,
+                    child: RaisedButton(
+                      color: Colors.transparent,
+                      // background
+                      textColor: Color(0xFF04EFB0),
+                      // foreground
+                      onPressed: () {},
+                      child: Text(
+                        'Back',
+                        style: TextStyle(fontSize: 18.0),
+                      ),
+                      shape: new RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(30.0),
+                      ),
+                    ),
+                  )
+                ]),
           ),
-          SizedBox(
-            height: 20.0,
-          ),
-          Container(
-
-            height: 50,
-            width: MediaQuery.of(context).size.width ,
-            child: themeButton(
-              roundedBorder: true,
-              name:  'Continue',
-              onClick: () {
-
-              },
-            ),
-          ),
-          SizedBox(
-            height: 16.0,
-          ),
-
-             new SizedBox(
-               width: MediaQuery.of(context).size.width,
-            height: 58.0,
-            child: RaisedButton(
-              color: Colors.transparent, // background
-              textColor: Color(0xFF04EFB0), // foreground
-              onPressed: () { },
-              child: Text('Back',style: TextStyle(fontSize: 18.0),),
-              shape: new RoundedRectangleBorder(
-                borderRadius: new BorderRadius.circular(30.0),
-              ),
-            ),
-          )
-
-        ]),
-      ),
-    ));
+        ));
   }
 }

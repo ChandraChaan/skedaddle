@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:skedaddle/Config/app_pages.dart';
 
 import '../../Common/Button.dart';
 import '../../Common/textField.dart';
+
 class RegisterNow extends StatefulWidget {
   @override
   _RegisterNowState createState() => _RegisterNowState();
@@ -18,7 +21,6 @@ class _RegisterNowState extends State<RegisterNow> {
   final ZipVal = TextEditingController(text: '');
   final cityVal = TextEditingController(text: '');
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,11 +30,15 @@ class _RegisterNowState extends State<RegisterNow> {
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               // List: [Color(0xFF04EFB0),Color(0xFF3E214B),Color(0xFF3E214B),Color(0xFF110D1D),Color(0xFF110D1D),Color(0xFF110D1D),]
-              colors: [Color(0xFF04EFB0),Color(0xFF3E214B),Color(0xFF3E214B),Color(0xFF110D1D),Color(0xFF110D1D),Color(0xFF110D1D),]
-          ),
-
+              colors: [
+                Color(0xFF04EFB0),
+                Color(0xFF3E214B),
+                Color(0xFF3E214B),
+                Color(0xFF110D1D),
+                Color(0xFF110D1D),
+                Color(0xFF110D1D),
+              ]),
         ),
-
         child: Center(
           child: SingleChildScrollView(
             child: Column(
@@ -42,8 +48,12 @@ class _RegisterNowState extends State<RegisterNow> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(top: 40.0),
-                  child: Text("Register Now",
-                    style: TextStyle(color: Colors.white,fontSize: 18.0,fontWeight: FontWeight.bold),
+                  child: Text(
+                    "Register Now",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
                 SizedBox(
@@ -54,39 +64,48 @@ class _RegisterNowState extends State<RegisterNow> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
-
                     children: [
-
-                      Text("Quick fill",
-                        style: TextStyle(color: Color(0xFF04EFB0),fontSize: 24.0,fontWeight: FontWeight.bold),
+                      Text(
+                        "Quick fill",
+                        style: TextStyle(
+                            color: Color(0xFF04EFB0),
+                            fontSize: 24.0,
+                            fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
                         height: 10.0,
                       ),
-                      Text("Choose one of your existing profiles to quickly fill in the registration form",
-                        style: TextStyle(color: Colors.white,fontSize: 16.0,fontWeight: FontWeight.normal),
+                      Text(
+                        "Choose one of your existing profiles to quickly fill in the registration form",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.normal),
                       ),
                       SizedBox(
                         height: 24.0,
                       ),
-                      Text("Basic Info",
-                        style: TextStyle(color: Color(0xFF04EFB0),fontSize: 22.0,fontWeight: FontWeight.normal),
+                      Text(
+                        "Basic Info",
+                        style: TextStyle(
+                            color: Color(0xFF04EFB0),
+                            fontSize: 22.0,
+                            fontWeight: FontWeight.normal),
                       ),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-
                           Text(
                             'First Name*',
-                            style: TextStyle(color: Colors.white,fontSize: 18.0),
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 18.0),
                           ),
                           SizedBox(
                             height: smHeighty,
                           ),
                           Container(
-                            child: formText(
-                                '', '', FirstName, 'n', false),
+                            child: formText('', '', FirstName, 'n', false),
                             height: 50,
                             width: MediaQuery.of(context).size.width,
                             // color: Colors.yellowAccent,
@@ -100,17 +119,16 @@ class _RegisterNowState extends State<RegisterNow> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-
                           Text(
                             'Last Name*',
-                            style: TextStyle(color: Colors.white,fontSize: 18.0),
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 18.0),
                           ),
                           SizedBox(
                             height: smHeighty,
                           ),
                           Container(
-                            child: formText(
-                                '', '', LastName, 'n', false),
+                            child: formText('', '', LastName, 'n', false),
                             height: 50,
                             width: MediaQuery.of(context).size.width,
                             // color: Colors.yellowAccent,
@@ -124,17 +142,16 @@ class _RegisterNowState extends State<RegisterNow> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-
                           Text(
                             'E-mail Address*',
-                            style: TextStyle(color: Colors.white,fontSize: 18.0),
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 18.0),
                           ),
                           SizedBox(
                             height: smHeighty,
                           ),
                           Container(
-                            child: formText(
-                                '', '', EmailId, 'n', false),
+                            child: formText('', '', EmailId, 'n', false),
                             height: 50,
                             width: MediaQuery.of(context).size.width,
                             // color: Colors.yellowAccent,
@@ -144,28 +161,42 @@ class _RegisterNowState extends State<RegisterNow> {
                       SizedBox(
                         height: 29.0,
                       ),
-                      Text("Additional Information",
-                        style: TextStyle(color: Color(0xFF04EFB0),fontSize: 22.0,fontWeight: FontWeight.normal),
+                      Text(
+                        "Additional Information",
+                        style: TextStyle(
+                            color: Color(0xFF04EFB0),
+                            fontSize: 22.0,
+                            fontWeight: FontWeight.normal),
                       ),
                       SizedBox(
                         height: smHeighty,
                       ),
                       Row(
                         children: [
-                          Text("Date of Birth",style: TextStyle(color: Colors.white,fontSize: 18.0),
+                          Text(
+                            "Date of Birth",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 18.0),
                           ),
                           SizedBox(
                             width: 60.0,
                           ),
-                          Text("Gender",style: TextStyle(color: Colors.white,fontSize: 18.0),
+                          Text(
+                            "Gender",
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 18.0),
                           )
                         ],
                       ),
                       SizedBox(
                         height: 29.0,
                       ),
-                      Text("Address",
-                        style: TextStyle(color: Color(0xFF04EFB0),fontSize: 24.0,fontWeight: FontWeight.bold),
+                      Text(
+                        "Address",
+                        style: TextStyle(
+                            color: Color(0xFF04EFB0),
+                            fontSize: 24.0,
+                            fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
                         height: smHeighty,
@@ -174,18 +205,16 @@ class _RegisterNowState extends State<RegisterNow> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-
                           Text(
                             'Street Address*',
-                            style: TextStyle(color: Colors.white,fontSize: 18.0),
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 18.0),
                           ),
                           SizedBox(
                             height: smHeighty,
                           ),
-
                           Container(
-                            child: formText(
-                                '', '', StreetAddress, 'n', false),
+                            child: formText('', '', StreetAddress, 'n', false),
                             height: 50,
                             width: MediaQuery.of(context).size.width,
                             // color: Colors.yellowAccent,
@@ -201,14 +230,14 @@ class _RegisterNowState extends State<RegisterNow> {
                         children: [
                           Text(
                             'Country*',
-                            style: TextStyle(color: Colors.white,fontSize: 18.0),
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 18.0),
                           ),
                           SizedBox(
                             height: smHeighty,
                           ),
                           Container(
-                            child: formText(
-                                '', '', CountryVal, 'n', false),
+                            child: formText('', '', CountryVal, 'n', false),
                             height: 50,
                             width: MediaQuery.of(context).size.width,
                             // color: Colors.yellowAccent,
@@ -224,14 +253,14 @@ class _RegisterNowState extends State<RegisterNow> {
                         children: [
                           Text(
                             'Zip Code*',
-                            style: TextStyle(color: Colors.white,fontSize: 18.0),
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 18.0),
                           ),
                           SizedBox(
                             height: smHeighty,
                           ),
                           Container(
-                            child: formText(
-                                '', '', ZipVal, 'n', false),
+                            child: formText('', '', ZipVal, 'n', false),
                             height: 50,
                             width: MediaQuery.of(context).size.width,
                             // color: Colors.yellowAccent,
@@ -247,20 +276,20 @@ class _RegisterNowState extends State<RegisterNow> {
                           Column(
                             children: [
                               Padding(
-                                padding: const EdgeInsets.only(right:100.0),
+                                padding: const EdgeInsets.only(right: 100.0),
                                 child: Text(
                                   'City*',
-                                  style: TextStyle(color: Colors.white,fontSize: 18.0),
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 18.0),
                                 ),
                               ),
                               SizedBox(
                                 height: smHeighty,
                               ),
                               Container(
-                                child: formText(
-                                    '', '', cityVal, 'n', false),
+                                child: formText('', '', cityVal, 'n', false),
                                 height: 50,
-                                width: MediaQuery.of(context).size.width/2.5,
+                                width: MediaQuery.of(context).size.width / 2.5,
                                 // color: Colors.yellowAccent,
                               ),
                             ],
@@ -268,58 +297,54 @@ class _RegisterNowState extends State<RegisterNow> {
                           Column(
                             children: [
                               Padding(
-                                padding: const EdgeInsets.only(right:100.0),
+                                padding: const EdgeInsets.only(right: 100.0),
                                 child: Text(
                                   'State*',
-                                  style: TextStyle(color: Colors.white,fontSize: 18.0),
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 18.0),
                                 ),
                               ),
-
-
                               SizedBox(
                                 height: smHeighty,
                               ),
                               Container(
-                                child: formText(
-                                    '', '', cityVal, 'n', false),
+                                child: formText('', '', cityVal, 'n', false),
                                 height: 50,
-                                width: MediaQuery.of(context).size.width/2.5,
+                                width: MediaQuery.of(context).size.width / 2.5,
                                 // color: Colors.yellowAccent,
                               ),
                             ],
                           ),
-
                         ],
                       ),
-
                       SizedBox(
-
                         height: 29.0,
                       ),
-                      Text("Choose Your Package*",
-                        style: TextStyle(color: Color(0xFF04EFB0),fontSize: 22.0,fontWeight: FontWeight.normal),
+                      Text(
+                        "Choose Your Package*",
+                        style: TextStyle(
+                            color: Color(0xFF04EFB0),
+                            fontSize: 22.0,
+                            fontWeight: FontWeight.normal),
                       ),
                       SizedBox(
                         height: smHeighty,
                       ),
                       Container(
-
                         height: 51,
-                        width: MediaQuery.of(context).size.width ,
+                        width: MediaQuery.of(context).size.width,
                         child: themeButton(
-                          name:  'Continue',
+                          name: 'Continue',
                           onClick: () {
-
+                            Get.toNamed(Routes.register);
                           },
                         ),
                       ),
                       SizedBox(
                         height: 16.0,
                       ),
-
                     ],
                   ),
-
                 ),
               ],
             ),
