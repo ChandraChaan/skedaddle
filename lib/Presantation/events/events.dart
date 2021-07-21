@@ -77,7 +77,7 @@ class _EventsPageState extends State<EventsPage> {
                               color: Colors.white,
                               borderRadius: BorderRadius.all(Radius.circular(30))),
                         ),
-                        SizedBox(width: 10),
+                        SizedBox(width: 4.0),
                         Container(
                           height: 40,
                           width: 40,
@@ -86,6 +86,7 @@ class _EventsPageState extends State<EventsPage> {
                               color: Colors.white,
                               borderRadius: BorderRadius.all(Radius.circular(30))),
                         ),
+
                       ],
                     ),
 
