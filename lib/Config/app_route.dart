@@ -7,5 +7,6 @@ abstract class Routes {
   static const regCart = '/regCart';
   static const upcomingEvents = '/upcomingEvents';
   static const signup = '/signup';
+  static const forgetPassword = '/forgetPassword';
 
 }

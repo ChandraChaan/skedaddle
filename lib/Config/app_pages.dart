@@ -4,13 +4,14 @@ import 'package:skedaddle/Presantation/events/registerNow.dart';
 import 'package:skedaddle/Presantation/events/registrationCart.dart';
 import 'package:skedaddle/Presantation/events/successPayment.dart';
 import 'package:skedaddle/Presantation/events/upcomingEvents.dart';
+import 'package:skedaddle/Presantation/forgetPassword.dart';
 import 'package:skedaddle/Presantation/getStarted/getStarted.dart';
 import 'package:skedaddle/Presantation/login.dart';
 import 'package:skedaddle/Presantation/signup.dart';
 
 part 'app_route.dart';
 class AppPages {
-  static const INITIAL = Routes.signup;
+  static const INITIAL = Routes.forgetPassword;
   static final routes = [
     GetPage(
         name: Routes.DEFAULT,
@@ -33,6 +34,9 @@ class AppPages {
     GetPage(
         name: Routes.signup,
         page: () => SignUp()),
+    GetPage(
+        name: Routes.forgetPassword,
+        page: () => forgetPassword()),
 
   ];
 }
