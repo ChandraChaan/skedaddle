@@ -66,7 +66,7 @@ class _loginPageState extends State<loginPage> {
                         ),
                         Text(
                           "Please sign in to continue",
-                          style: TextStyle(color: UiWhiteColor),
+                          style: TextStyle(color: UiWhiteColor,fontSize: 16.0),
                         ),
                         SizedBox(
                           height: 30,
@@ -114,7 +114,7 @@ class _loginPageState extends State<loginPage> {
                               },
                               child: Text('Forgot password?',
                                   style: TextStyle(
-                                      fontSize: 16, color: UiWhiteColor))),
+                                      fontSize: 14, color: UiWhiteColor))),
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -127,7 +127,7 @@ class _loginPageState extends State<loginPage> {
                             ),
                             Text("OR",
                                 style: TextStyle(
-                                    fontSize: 16, color: UiWhiteColor)),
+                                    fontSize: 14, color: UiWhiteColor)),
                             Container(
                               height: 2,
                               width: getWidth(context) / 2.7, // Thickness
@@ -141,23 +141,24 @@ class _loginPageState extends State<loginPage> {
                             child: Text("Sign in with",
                                 style: TextStyle(
                                     fontSize: 16, color: UiWhiteColor))),
-                        SizedBox(height: 10,),
+                        // SizedBox(height: 10,),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                              height: 60,
-                              width: 60,
-                             child: Image.asset('assets/icons/facebbok.png',),
+                              height: 50,
+                               width: 50,
+                               child: Image.asset('assets/icons/facebbok.png',),
+
                               decoration: BoxDecoration(
-                                  color: Colors.white,
+                                  color: Colors.red,
                                   borderRadius: BorderRadius.all(Radius.circular(30))),
                             ),
                             SizedBox(width: 10),
                             Container(
-                              height: 60,
-                              width: 60,
-                              child: Image.asset('assets/icons/google.png'),
+                              height: 50,
+                              width: 50,
+                                child: Image.asset('assets/icons/google.png',),
                               decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.all(Radius.circular(30))),

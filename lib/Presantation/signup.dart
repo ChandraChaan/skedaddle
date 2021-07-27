@@ -36,14 +36,12 @@ class _SignUpState extends State<SignUp> {
                 SizedBox(
                   height: 30,
                 ),
-                Expanded(
-                    flex: 2,
-                    child: Align(
-                      alignment: Alignment.topCenter,
-                      child: Container(
-                          width: getWidth(context) / 2,
-                          child: Image.asset('assets/images/logo.png')),
-                    )),
+                Align(
+                  alignment: Alignment.topCenter,
+                  child: Container(
+                      width: getWidth(context) / 2,
+                      child: Image.asset('assets/images/logo.png')),
+                ),
                 SizedBox(
                   height: 30,
                 ),
@@ -175,8 +173,8 @@ class _SignUpState extends State<SignUp> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  height: 60,
-                  width: 60,
+                  height: 50,
+                  width: 50,
                   child: Image.asset('assets/icons/facebbok.png',),
                   decoration: BoxDecoration(
                       color: UiWhiteColor,
@@ -184,8 +182,8 @@ class _SignUpState extends State<SignUp> {
                 ),
                 SizedBox(width: 10),
                 Container(
-                  height: 60,
-                  width: 60,
+                  height: 50,
+                  width: 50,
                   child: Image.asset('assets/icons/google.png'),
                   decoration: BoxDecoration(
                       color: UiWhiteColor,
@@ -193,8 +191,8 @@ class _SignUpState extends State<SignUp> {
                 ),
                 SizedBox(width: 10),
                 Container(
-                  height: 60,
-                  width: 60,
+                  height: 50,
+                  width: 50,
                   child: Image.asset('assets/icons/google.png'),
                   decoration: BoxDecoration(
                       color: UiWhiteColor,
@@ -218,7 +216,7 @@ class _SignUpState extends State<SignUp> {
                           MaterialPageRoute(builder: (context) => SignUp()),
                         );
                       },
-                      child: Text('login',
+                      child: Text('Login',
                           style: TextStyle(
                               fontSize: 16, color: UiGreenColor, fontWeight: FontWeight.bold)),
                     ),
