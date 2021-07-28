@@ -1,4 +1,5 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
+import 'package:skedaddle/Application/Binding/MainBinding.dart';
 import 'package:skedaddle/Presantation/events/events.dart';
 import 'package:skedaddle/Presantation/events/register.dart';
 import 'package:skedaddle/Presantation/events/registerNow.dart';
@@ -25,7 +26,7 @@ class AppPages {
         page: () => Register()),
     GetPage(
         name: Routes.login,
-        page: () => loginPage()),
+        page: () => loginPage(),binding: MainBinding()),
     GetPage(
         name: Routes.regCart,
         page: () => RegistrationCart()),

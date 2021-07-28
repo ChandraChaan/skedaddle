@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 import 'Config/app_pages.dart';
+import 'Network/Logger.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.lightGreen,
       ),
+      logWriterCallback: Logger.write,
       getPages: AppPages.routes,
       initialRoute: AppPages.INITIAL,
     );

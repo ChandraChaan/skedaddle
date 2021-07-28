@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:skedaddle/Application/Controller/LoginController.dart';
 import 'package:skedaddle/Common/Button.dart';
 import 'package:skedaddle/Common/textField.dart';
 import 'package:skedaddle/Config/app_pages.dart';
@@ -17,9 +18,10 @@ class loginPage extends StatefulWidget {
 }
 
 class _loginPageState extends State<loginPage> {
+  final LoginController loginController = Get.find();
   final remark = TextEditingController();
-  final emailControl = TextEditingController();
-  final pwControl = TextEditingController();
+  final emailControl = TextEditingController(text:'jonedev.18@gmail.com');
+  final pwControl = TextEditingController(text:'1234567');
 
   @override
   Widget build(BuildContext context) {
@@ -95,7 +97,32 @@ class _loginPageState extends State<loginPage> {
                           child: themeButton(
                             name: 'Login',
                             onClick: () {
-                              Get.toNamed(Routes.eventsPage);
+                              if (emailControl.text.isEmpty) {
+                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                                  backgroundColor:Colors.red,
+                                  behavior: SnackBarBehavior.floating,
+                                  content: Text('Please fill username'),
+                                ));
+                              }
+                              else if (pwControl.text.isEmpty) {
+                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                                  backgroundColor:Colors.red,
+                                  behavior: SnackBarBehavior.floating,
+                                  content: Text('Please fill password'),
+                                ));
+                              }
+                              else if (emailControl.text.isNotEmpty &&
+                                  pwControl.text.isNotEmpty) {
+                                loginController.callAPI(
+                                    emailControl.text, pwControl.text);
+                              }
+                              else{
+                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                                  backgroundColor:Colors.red,
+                                  behavior: SnackBarBehavior.floating,
+                                  content: Text('Please fill details and try again'),
+                                ));
+                              }
                             },
                           ),
                         ),
@@ -141,17 +168,22 @@ class _loginPageState extends State<loginPage> {
                             child: Text("Sign in with",
                                 style: TextStyle(
                                     fontSize: 16, color: UiWhiteColor))),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
                               height: 60,
                               width: 60,
-                             child: Image.asset('assets/icons/facebbok.png',),
+                              child: Image.asset(
+                                'assets/icons/facebbok.png',
+                              ),
                               decoration: BoxDecoration(
                                   color: Colors.white,
-                                  borderRadius: BorderRadius.all(Radius.circular(30))),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(30))),
                             ),
                             SizedBox(width: 10),
                             Container(
@@ -160,11 +192,14 @@ class _loginPageState extends State<loginPage> {
                               child: Image.asset('assets/icons/google.png'),
                               decoration: BoxDecoration(
                                   color: Colors.white,
-                                  borderRadius: BorderRadius.all(Radius.circular(30))),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(30))),
                             ),
                           ],
                         ),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -177,12 +212,15 @@ class _loginPageState extends State<loginPage> {
                                   onPressed: () {
                                     Navigator.push(
                                       context,
-                                      MaterialPageRoute(builder: (context) => SignUp()),
+                                      MaterialPageRoute(
+                                          builder: (context) => SignUp()),
                                     );
                                   },
                                   child: Text('Sign up',
                                       style: TextStyle(
-                                          fontSize: 16, color: UiGreenColor, fontWeight: FontWeight.bold)),
+                                          fontSize: 16,
+                                          color: UiGreenColor,
+                                          fontWeight: FontWeight.bold)),
                                 ),
                               ],
                             ),
