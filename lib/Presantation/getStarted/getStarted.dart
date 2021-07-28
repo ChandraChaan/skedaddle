@@ -46,6 +46,7 @@ class GetStartedImage extends StatelessWidget {
                           child: Text(
                             'Lorem Ipsum is Dummy Text',
                             style: TextStyle(
+                              fontFamily:'Raleway' ,
                                 color: UiGreenColor,
                                 fontWeight: FontWeight.bold,
                                 fontSize: BigHeading),
@@ -58,7 +59,7 @@ class GetStartedImage extends StatelessWidget {
                           width: getWidth(context) / 1.3,
                           child: Text(
                             'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-                            style: TextStyle(color: UiWhiteColor),
+                            style: TextStyle(color: UiWhiteColor,fontSize: 16.0),
                           ),
                         ),
                         SizedBox(

@@ -8,4 +8,4 @@ double getWidth(BuildContext context){
 }
 
 final double BigHeading = 45.0;
-final double NormalHeading = 35.0;
+final double NormalHeading = 30.0;
