@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:skedaddle/Application/Controller/SignupController.dart';
 import 'package:skedaddle/Common/Button.dart';
 import 'package:skedaddle/Common/textField.dart';
+import 'package:skedaddle/Config/app_pages.dart';
 import 'package:skedaddle/Utils/colors.dart';
 import 'package:skedaddle/Utils/constants.dart';
 
@@ -10,6 +13,7 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  final SignupController signupController = Get.find();
   final firstname = TextEditingController();
   final lastname = TextEditingController();
   final email = TextEditingController();
@@ -45,8 +49,8 @@ class _SignUpState extends State<SignUp> {
                 SizedBox(
                   height: 30,
                 ),
-                Align(alignment:Alignment.topLeft,
-                    child:Text("Sign up",
+                Align(alignment: Alignment.topLeft,
+                    child: Text("Sign up",
                       style: TextStyle(
                           color: UiWhiteColor,
                           fontSize: 30.0,
@@ -54,7 +58,7 @@ class _SignUpState extends State<SignUp> {
                           fontFamily: 'san-serif'),)),
                 Align(
                     alignment: Alignment.bottomLeft,
-                    child: Text("Please sign in to continue",style: TextStyle(
+                    child: Text("Please sign in to continue", style: TextStyle(
                         color: UiWhiteColor,
                         fontSize: 16.0,
                         fontWeight: FontWeight.normal,
@@ -110,10 +114,17 @@ class _SignUpState extends State<SignUp> {
 
                 Container(
                   height: 56,
-                  width: MediaQuery.of(context).size.width ,
+                  width: MediaQuery
+                      .of(context)
+                      .size
+                      .width,
                   child: themeButton(
-                    name:  'Sign up',
+                    name: 'Sign up',
                     onClick: () {
+                      signupController.callAPI(fs: firstname.text,
+                          ln: lastname.text,
+                          e: email.text,
+                          pw: pwd.text);
                     },
                   ),
                 ),
@@ -163,66 +174,69 @@ class _SignUpState extends State<SignUp> {
                     ),
                   ],
                 ),
-            Align(
-                alignment: Alignment.center,
-                child: Text("Sign in with",
-                    style: TextStyle(
-                        fontSize: 16, color: UiWhiteColor))),
-            SizedBox(height: 10,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  height: 50,
-                  width: 50,
-                  child: Image.asset('assets/icons/facebbok.png',),
-                  decoration: BoxDecoration(
-                      color: UiWhiteColor,
-                      borderRadius: BorderRadius.all(Radius.circular(30))),
-                ),
-                SizedBox(width: 10),
-                Container(
-                  height: 50,
-                  width: 50,
-                  child: Image.asset('assets/icons/google.png'),
-                  decoration: BoxDecoration(
-                      color: UiWhiteColor,
-                      borderRadius: BorderRadius.all(Radius.circular(30))),
-                ),
-                SizedBox(width: 10),
-                Container(
-                  height: 50,
-                  width: 50,
-                  child: Image.asset('assets/icons/google.png'),
-                  decoration: BoxDecoration(
-                      color: UiWhiteColor,
-                      borderRadius: BorderRadius.all(Radius.circular(30))),
-                ),
-              ],
-            ),
-            SizedBox(height: 10,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Row(
-                  children: [
-                    Text('Have an account?',
+                Align(
+                    alignment: Alignment.center,
+                    child: Text("Sign in with",
                         style: TextStyle(
-                            fontSize: 16, color: UiWhiteColor)),
-                    TextButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => SignUp()),
-                        );
-                      },
-                      child: Text('Login',
-                          style: TextStyle(
-                              fontSize: 16, color: UiGreenColor, fontWeight: FontWeight.bold)),
+                            fontSize: 16, color: UiWhiteColor))),
+                SizedBox(height: 10,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 50,
+                      width: 50,
+                      child: Image.asset('assets/icons/facebbok.png',),
+                      decoration: BoxDecoration(
+                          color: UiWhiteColor,
+                          borderRadius: BorderRadius.all(Radius.circular(30))),
+                    ),
+                    SizedBox(width: 10),
+                    Container(
+                      height: 50,
+                      width: 50,
+                      child: Image.asset('assets/icons/google.png'),
+                      decoration: BoxDecoration(
+                          color: UiWhiteColor,
+                          borderRadius: BorderRadius.all(Radius.circular(30))),
+                    ),
+                    SizedBox(width: 10),
+                    Container(
+                      height: 50,
+                      width: 50,
+                      child: Image.asset('assets/icons/google.png'),
+                      decoration: BoxDecoration(
+                          color: UiWhiteColor,
+                          borderRadius: BorderRadius.all(Radius.circular(30))),
                     ),
                   ],
                 ),
-]),
+                SizedBox(height: 10,),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Row(
+                        children: [
+                          Text('Have an account?',
+                              style: TextStyle(
+                                  fontSize: 16, color: UiWhiteColor)),
+                          TextButton(
+                            onPressed: () {
+                              Get.toNamed(Routes.login);
+                              // Navigator.push(
+                              //   context,
+                              //   MaterialPageRoute(builder: (context) => SignUp()),
+                              // );
+                            },
+                            child: Text('Login',
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    color: UiGreenColor,
+                                    fontWeight: FontWeight.bold)),
+                          ),
+                        ],
+                      ),
+                    ]),
               ],
             ),
           ),

@@ -11,5 +11,10 @@ abstract class Routes {
   static const successpayment = '/successpayment';
   static const forgetPassword = '/forgetPassword';
   static const eventsPage = '/eventsPage';
+  static const profile = '/profile';
+  static const homescreen = '/home';
+  static const connections = '/connections';
+  static const mainEvents = '/mainEvents';
+  static const Winners = '/Winners';
 
 }

@@ -5,16 +5,14 @@ import 'package:skedaddle/Common/Loader.dart';
 import 'package:skedaddle/Config/app_pages.dart';
 import 'package:skedaddle/Domain/Login_dataClass.dart';
 import 'package:skedaddle/Infrastructure/Login_param.dart';
+import 'package:skedaddle/Infrastructure/Signup_param.dart';
 import 'package:skedaddle/Provider/SkadaddleAdapter.dart';
 
-class LoginController extends GetxController {
-  LoginController({this.skadaddlerepository});
+class SignupController extends GetxController {
+  SignupController({this.skadaddlerepository});
 
   /// inject repo abstraction dependency
   final ISkadaddleRepository skadaddlerepository;
-  String userAccessToken = '';
-  String userTokenType = '';
-  String expiresIn = '';
 
   @override
   void onInit() {
@@ -34,17 +32,20 @@ class LoginController extends GetxController {
     super.onClose();
   }
 
-  callAPI(String username, String password) {
+  callAPI({String fs, String ln, String e, String pw}) {
     Loader.show();
     // CircularProgressIndicator();
     skadaddlerepository
-        .dynamic(LoginAPIModal(username: username, pasword: password))
+        .dynamic(SignupAPIModal(firstName: fs, lastName: ln, email: e, pasword: pw))
         .then((data) {
       Navigator.of(Get.context, rootNavigator: true).pop('dialog');
-      userAccessToken = data.results['access_token'];
-      userTokenType = data.results['token_type'];
-      expiresIn = data.results['expires_in'].toString();
-      Get.toNamed(Routes.profile);
+      Get.toNamed(Routes.login);
+      Get.snackbar(
+        "Register successfully".toString(),
+        "",
+        snackPosition: SnackPosition.BOTTOM,
+        backgroundColor: Colors.red,
+      );
     }, onError: (err) {
       Navigator.of(Get.context, rootNavigator: true).pop('dialog');
       Get.snackbar(

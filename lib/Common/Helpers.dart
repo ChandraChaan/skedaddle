@@ -4,6 +4,7 @@ class Helpers {
   /// Auth Services
   static final String baseUrl = "https://skedaddle.login2design.co.uk/api";
   static final String login = "/auth/login";
+  static final String register = "/auth/register";
 
 
   String convertToBase64(String credentials) {

@@ -21,7 +21,7 @@ class _loginPageState extends State<loginPage> {
   final LoginController loginController = Get.find();
   final remark = TextEditingController();
   final emailControl = TextEditingController(text:'jonedev.18@gmail.com');
-  final pwControl = TextEditingController(text:'1234567');
+  final pwControl = TextEditingController(text:'123456789');
 
   @override
   Widget build(BuildContext context) {
@@ -208,11 +208,12 @@ class _loginPageState extends State<loginPage> {
                                         fontSize: 16, color: UiWhiteColor)),
                                 TextButton(
                                   onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => SignUp()),
-                                    );
+                                    Get.toNamed(Routes.signup);
+                                    // Navigator.push(
+                                    //   context,
+                                    //   MaterialPageRoute(
+                                    //       builder: (context) => SignUp()),
+                                    // );
                                   },
                                   child: Text('Sign up',
                                       style: TextStyle(

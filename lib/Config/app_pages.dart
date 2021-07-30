@@ -8,8 +8,13 @@ import 'package:skedaddle/Presantation/events/successPayment.dart';
 import 'package:skedaddle/Presantation/events/upcomingEvents.dart';
 import 'package:skedaddle/Presantation/forgetPassword.dart';
 import 'package:skedaddle/Presantation/getStarted/getStarted.dart';
+import 'package:skedaddle/Presantation/homePage.dart';
 import 'package:skedaddle/Presantation/login.dart';
+import 'package:skedaddle/Presantation/profile.dart';
 import 'package:skedaddle/Presantation/signup.dart';
+import 'package:skedaddle/Presantation/widgets/connections.dart';
+import 'package:skedaddle/Presantation/widgets/mainEvents.dart';
+import 'package:skedaddle/Presantation/widgets/winners.dart';
 
 part 'app_route.dart';
 class AppPages {
@@ -17,7 +22,7 @@ class AppPages {
   static final routes = [
     GetPage(
         name: Routes.DEFAULT,
-        page: () => GetStartedImage()),
+        page: () => HomeScreen()),
     GetPage(
         name: Routes.getStartedImage,
         page: () => GetStartedImage()),
@@ -35,7 +40,7 @@ class AppPages {
         page: () => UpcomingEventsInfo()),
     GetPage(
         name: Routes.signup,
-        page: () => SignUp()),
+        page: () => SignUp(), binding: MainBinding()),
     GetPage(
         name: Routes.forgetPassword,
         page: () => forgetPassword()),
@@ -48,6 +53,13 @@ class AppPages {
     GetPage(
         name: Routes.successpayment,
         page: () => SuccessPayment()),
+    GetPage(
+        name: Routes.profile,
+        page: () => Profile()),
+    GetPage(name: Routes.homescreen,page: () => HomeScreen()),
+    GetPage(name: Routes.connections,page: () => Connections()),
+    GetPage(name: Routes.mainEvents,page: () => mainEvents()),
+    GetPage(name: Routes.Winners,page: () => WinnersPage()),
 
   ];
 }

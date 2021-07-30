@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:skedaddle/Config/app_pages.dart';
 
 
 class themeBody extends StatelessWidget {
@@ -16,6 +18,34 @@ class themeBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // appBar: AppBar(),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              child: Text('Skadaddle'),
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+            ),
+            ListTile(
+              title: Text('Logout'),
+              onTap: () {
+                Get.toNamed(Routes.login);
+              },
+            ),
+            ListTile(
+              title: Text('Events'),
+              onTap: () {
+                Get.toNamed(Routes.upcomingEvents);
+                // Update the state of the app.
+                // ...
+              },
+            ),
+          ],
+        ),
+      ),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
