@@ -29,12 +29,18 @@ class _RegistrationCartState extends State<RegistrationCart> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 2.0),
-                child: Text(
-                  'Registration Cart',
-                  style: TextStyle(
-                      color: Color(0xFF04EFB0),
-                      fontSize: 24.0,
-                      fontWeight: FontWeight.bold),
+                child: Row(
+                  children: [
+                    Text(
+                      'Registration Cart',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(width: 10,),
+                    Icon(Icons.edit,color: Colors.white,)
+                  ],
                 ),
               ),
               SizedBox(
@@ -73,9 +79,9 @@ class _RegistrationCartState extends State<RegistrationCart> {
                   Container(
                       width: MediaQuery.of(context).size.width / 5.5,
                       child: Text(
-                        "\$38.57",
+                        "\$38.75",
                         style:
-                            TextStyle(color: Color(0xFF04EFB0), fontSize: 24.0),
+                            TextStyle(color: Color(0xFF04EFB0), fontSize: 20.0),
                       )),
                   SizedBox(
                     width: 15.0,
@@ -85,7 +91,7 @@ class _RegistrationCartState extends State<RegistrationCart> {
                       child: Text(
                         "\$38.57 ",
                         style:
-                            TextStyle(color: Color(0xFF04EFB0), fontSize: 24.0),
+                            TextStyle(color: Color(0xFF04EFB0), fontSize: 20.0),
                       )),
                 ],
               ),
@@ -114,7 +120,7 @@ class _RegistrationCartState extends State<RegistrationCart> {
                       child: Text(
                         "\$38.57",
                         style:
-                            TextStyle(color: Color(0xFF04EFB0), fontSize: 24.0),
+                            TextStyle(color: Color(0xFF04EFB0), fontSize: 20.0),
                       )),
                   SizedBox(
                     width: 15.0,
@@ -124,7 +130,7 @@ class _RegistrationCartState extends State<RegistrationCart> {
                       child: Text(
                         "\$38.57 ",
                         style:
-                            TextStyle(color: Color(0xFF04EFB0), fontSize: 24.0),
+                            TextStyle(color: Color(0xFF04EFB0), fontSize: 20.0),
                       )),
                 ],
               ),

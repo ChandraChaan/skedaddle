@@ -46,9 +46,10 @@ class _EventsPageState extends State<EventsPage> {
                         Container(
                           height: 153.0,
                           width: 320.0,
+                          child: Image.asset('images/running1.png'),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25), // radius of 10
-                            color: Color(0xFF707070), // green as background color
+                            color: Colors.tealAccent, // green as background color
                           ),
                         ),
                         Row(

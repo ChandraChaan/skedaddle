@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:skedaddle/Common/Button.dart';
 import 'package:skedaddle/Common/themeBody.dart';
+import 'package:skedaddle/Utils/constants.dart';
 
 class Profile extends StatefulWidget {
   @override
@@ -12,6 +13,7 @@ class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return themeBody(
+      title: Text('My Profile', style: UInormalStyle,),
       body: Container(
         width: MediaQuery.of(context).size.width,
           child: Column(

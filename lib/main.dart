@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Skedaddle app',
       theme: ThemeData(
         primarySwatch: Colors.lightGreen,

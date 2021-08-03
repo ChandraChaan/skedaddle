@@ -22,7 +22,7 @@ class AppPages {
   static final routes = [
     GetPage(
         name: Routes.DEFAULT,
-        page: () => HomeScreen()),
+        page: () => GetStartedImage()),
     GetPage(
         name: Routes.getStartedImage,
         page: () => GetStartedImage()),

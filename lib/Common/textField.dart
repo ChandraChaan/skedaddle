@@ -79,6 +79,8 @@ class _UiFormTextState extends State<UiFormText> {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      // cursorColor:Colors.white,
+      style: TextStyle(color: Colors.white),
       obscureText: widget.label == 'Password' ? _showPassword1:false,
       readOnly: widget.readonlyye,
       controller: widget.controllercc,

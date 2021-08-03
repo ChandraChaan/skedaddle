@@ -16,6 +16,7 @@ class SuccessPayment extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Image.asset("images/succesimage.png"),
               Text(
                 'Successful Payment',
                 style: TextStyle(

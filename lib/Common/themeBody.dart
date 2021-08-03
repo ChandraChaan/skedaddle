@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:skedaddle/Config/app_pages.dart';
 
-
 class themeBody extends StatelessWidget {
   final Widget title;
   final String assetmage;
@@ -19,73 +18,69 @@ class themeBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       // appBar: AppBar(),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              child: Text('Skadaddle'),
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-            ),
-            ListTile(
-              title: Text('Logout'),
-              onTap: () {
-                Get.toNamed(Routes.login);
-              },
-            ),
-            ListTile(
-              title: Text('Events'),
-              onTap: () {
-                Get.toNamed(Routes.upcomingEvents);
-                // Update the state of the app.
-                // ...
-              },
-            ),
-          ],
-        ),
-      ),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.topRight,
               // List: [Color(0xFF04EFB0),Color(0xFF3E214B),Color(0xFF281531),]
-              colors: [Color(0xFF04EFB0),Color(0xFF3E214B),Color(0xFF281531),]
-          ),
-
+              colors: [
+                Color(0xFF04EFB0),
+                Color(0xFF3E214B),
+                Color(0xFF281531),
+              ]),
         ),
         child: Column(
           children: [
             Expanded(
               flex: 1,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
+              child: Row(
+                // mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  assetmage == null ? Container():Container(
-                    width: 69,
-                    height: 69,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        border: Border.all(
-                          color: Colors.white,
+                  Expanded(
+                      flex: 2,
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: IconButton(
+                            onPressed: () {
+                              Get.toNamed(Routes.DEFAULT);
+                              // Navigator.of(context).pop();
+                            },
+                            icon: Icon(Icons.arrow_back)),
+                      )),
+                  Expanded(
+                    flex: 3,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        assetmage == null
+                            ? Container()
+                            : Container(
+                                width: 69,
+                                height: 69,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    border: Border.all(
+                                      color: Colors.white,
+                                    ),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(35))),
+                                child: Image.asset('${assetmage}'),
+                              ),
+                        SizedBox(
+                          height: 12,
                         ),
-                        borderRadius: BorderRadius.all(Radius.circular(35))),
-                    child: Image.asset('${assetmage}'),
+                        title == null ? Container() : title,
+                      ],
+                    ),
                   ),
-                  SizedBox(
-                    height: 12,
-                  ),
-                  title == null ?Container():title,
                 ],
               ),
             ),
             Expanded(
-                flex: assetmage == null ? 7:5 ,
+                flex: assetmage == null ? 7 : 5,
                 child: Container(
-
                     decoration: BoxDecoration(
                       color: Color(0xFF281531),
                       borderRadius: BorderRadius.only(

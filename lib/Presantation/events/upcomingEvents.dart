@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:skedaddle/Common/Button.dart';
+import 'package:skedaddle/Common/timeContainer.dart';
 import 'package:skedaddle/Config/app_pages.dart';
 
 class UpcomingEventsInfo extends StatefulWidget {
@@ -18,17 +19,34 @@ class _UpcomingEventsInfoState extends State<UpcomingEventsInfo> {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              Image.asset("images/upcomingevents.png"),
+              // SizedBox(
+              //   height: 40.0,
+              // ),
+              Text(
+                "How Many days are left to sign up for this event",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold),
+              ),
               SizedBox(
-                height: 40.0,
+                height: 10.0,
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 55.0),
-                child: Text(
-                  "How Many days are left to sign up for this event",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 24.0,
-                      fontWeight: FontWeight.bold),
+                padding: const EdgeInsets.only(left: 48, right: 48),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    timeContainer(nunber: 0),
+                    timeContainer(nunber: 1),
+                    timeContainer(),
+                    timeContainer(nunber: 2),
+                    timeContainer(nunber: 5),
+                    timeContainer(),
+                    timeContainer(nunber: 3),
+                    timeContainer(nunber: 8),
+                  ],
                 ),
               ),
               SizedBox(
