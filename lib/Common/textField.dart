@@ -98,14 +98,14 @@ class _UiFormTextState extends State<UiFormText> {
           ),
         ) : null,
         enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(11)),
+            borderRadius: widget.label == 'r' ? BorderRadius.all(Radius.circular(33)):BorderRadius.all(Radius.circular(11)),
           borderSide: BorderSide(color: Colors.white30),
         ),
         floatingLabelBehavior:
         widget.normalFeild == true ? null : FloatingLabelBehavior.always,
         border: OutlineInputBorder(
             borderSide: BorderSide(color: Colors.white30),
-            borderRadius: BorderRadius.all(Radius.circular(11))),
+            borderRadius: widget.label == 'r' ? BorderRadius.all(Radius.circular(33)):BorderRadius.all(Radius.circular(11))),
         labelStyle: widget.normalFeild == true ? null : _labelStyle_l,
         hintStyle: _hintStyle_l,
         labelText: widget.normalFeild == true ? null : widget.label,

@@ -5,7 +5,7 @@ class Helpers {
   static final String baseUrl = "https://skedaddle.login2design.co.uk/api";
   static final String login = "/auth/login";
   static final String register = "/auth/register";
-
+  static final String alleventsList = "/event/all-event-list";
 
   String convertToBase64(String credentials) {
     final Codec<String, String> stringToBase64 = utf8.fuse(base64);

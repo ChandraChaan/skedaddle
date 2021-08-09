@@ -46,7 +46,7 @@ class _EventsPageState extends State<EventsPage> {
                         Container(
                           height: 153.0,
                           width: 320.0,
-                          child: Image.asset('images/running1.png'),
+                          child: Image.asset('assets/images/running1.png'),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25), // radius of 10
                             color: Colors.tealAccent, // green as background color
@@ -100,32 +100,61 @@ class _EventsPageState extends State<EventsPage> {
                             ),
                           ],
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Container(
-                              height: 40,
-                              width: 40,
-                              child: Image.asset(
-                                'assets/icons/facebbok.png',
-                              ),
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(30))),
+                        Padding(
+                          padding: const EdgeInsets.all(18.0),
+                          child: Container(
+                            // color:Colors.white,
+                            child: Stack(
+                              children: [
+                                // for(int i=0; i<4; i*5)
+                                CircleAvatar(
+                                  child: Image.asset(
+                                      'assets/images/Ellipse 47-1.png'),
+                                ),
+                                Padding(
+                                  padding:
+                                  const EdgeInsets.only(left: 26),
+                                  child: CircleAvatar(
+                                    child: Image.asset(
+                                        'assets/images/Ellipse 47.png'),
+                                  ),
+                                ),
+                                Padding(
+                                  padding:
+                                  const EdgeInsets.only(left: 52),
+                                  child: CircleAvatar(
+                                    child: Image.asset(
+                                        'assets/images/Ellipse 47-2.png'),
+                                  ),
+                                ),
+                                Padding(
+                                  padding:
+                                  const EdgeInsets.only(left: 78),
+                                  child: CircleAvatar(
+                                    child: Image.asset(
+                                        'assets/images/Ellipse 47-1.png'),
+                                  ),
+                                ),
+                                Padding(
+                                  padding:
+                                  const EdgeInsets.only(left: 100),
+                                  child: CircleAvatar(
+                                    child: Image.asset(
+                                        'assets/images/Ellipse 47.png'),
+                                  ),
+                                ),
+                                Padding(
+                                  padding:
+                                  const EdgeInsets.only(left: 105),
+                                  child: CircleAvatar(
+                                    child: Image.asset(
+                                        'assets/images/Ellipse 47-2.png'),
+                                  ),
+                                ),
+                              ],
                             ),
-                            SizedBox(width: 4.0),
-                            Container(
-                              height: 40,
-                              width: 40,
-                              child: Image.asset('assets/icons/google.png'),
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(30))),
-                            ),
-                          ],
-                        ),
+                          ),
+                        )
                       ],
                     ),
                   ),

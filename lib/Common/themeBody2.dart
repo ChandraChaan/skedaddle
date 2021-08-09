@@ -43,7 +43,6 @@ class themeBody2 extends StatelessWidget {
             Expanded(
                 flex: 5,
                 child: Container(
-
                     decoration: BoxDecoration(
                       color: Color(0xFF281531),
                       borderRadius: BorderRadius.only(

@@ -33,7 +33,7 @@ class GetStartedImage extends StatelessWidget {
                     alignment: Alignment.topCenter,
                     child: Container(
                         width: getWidth(context) / 2,
-                        child: Image.asset('assets/images/logo.png')),
+                        child: Image.asset('assets/images/logo.png', fit: BoxFit.fitWidth,)),
                   ),
                 ),
                 Expanded(

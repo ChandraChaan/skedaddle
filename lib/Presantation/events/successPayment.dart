@@ -16,7 +16,7 @@ class SuccessPayment extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset("images/succesimage.png"),
+              Image.asset("assets/images/succesimage1.png"),
               Text(
                 'Successful Payment',
                 style: TextStyle(
@@ -47,7 +47,7 @@ class SuccessPayment extends StatelessWidget {
                 child: themeButton(
                   name: 'Done',
                   onClick: () {
-                    Get.toNamed(Routes.eventsPage);
+                    Get.toNamed(Routes.homescreen);
                   },
                 ),
               ),

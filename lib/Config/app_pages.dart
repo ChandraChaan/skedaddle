@@ -1,5 +1,6 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:skedaddle/Application/Binding/MainBinding.dart';
+import 'package:skedaddle/Presantation/events/choosePackage.dart';
 import 'package:skedaddle/Presantation/events/events.dart';
 import 'package:skedaddle/Presantation/events/register.dart';
 import 'package:skedaddle/Presantation/events/registerNow.dart';
@@ -18,11 +19,11 @@ import 'package:skedaddle/Presantation/widgets/winners.dart';
 
 part 'app_route.dart';
 class AppPages {
-  static const INITIAL = Routes.DEFAULT;
+  static const INITIAL = Routes.getStartedImage;
   static final routes = [
     GetPage(
         name: Routes.DEFAULT,
-        page: () => GetStartedImage()),
+        page: () => HomeScreen()),
     GetPage(
         name: Routes.getStartedImage,
         page: () => GetStartedImage()),
@@ -56,10 +57,11 @@ class AppPages {
     GetPage(
         name: Routes.profile,
         page: () => Profile()),
-    GetPage(name: Routes.homescreen,page: () => HomeScreen()),
+    GetPage(name: Routes.homescreen,page: () => HomeScreen(), binding: MainBinding()),
     GetPage(name: Routes.connections,page: () => Connections()),
     GetPage(name: Routes.mainEvents,page: () => mainEvents()),
     GetPage(name: Routes.Winners,page: () => WinnersPage()),
+    GetPage(name: Routes.choosePackagepage,page: () => choosePackagepage()),
 
   ];
 }

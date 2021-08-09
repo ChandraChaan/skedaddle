@@ -28,9 +28,9 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Skedaddle app',
-      theme: ThemeData(
-        primarySwatch: Colors.lightGreen,
-      ),
+      // theme: ThemeData(
+      //   primarySwatch: Colors.lightGreen,
+      // ),
       logWriterCallback: Logger.write,
       getPages: AppPages.routes,
       initialRoute: AppPages.INITIAL,

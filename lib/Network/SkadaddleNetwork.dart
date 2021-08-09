@@ -54,8 +54,9 @@ class SkadaddleNetwork {
 
             response = await _dio.get(
               networkDataClass.extendedUrl,
+              options: networkDataClass.options,
             );
-            // options: networkDataClass.options);
+
             // Logger.writeLog(response);
             break;
         }

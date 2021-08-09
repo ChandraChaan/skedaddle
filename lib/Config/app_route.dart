@@ -16,5 +16,6 @@ abstract class Routes {
   static const connections = '/connections';
   static const mainEvents = '/mainEvents';
   static const Winners = '/Winners';
+  static const choosePackagepage = '/choosePackagepage';
 
 }

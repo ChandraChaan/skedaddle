@@ -44,7 +44,7 @@ class LoginController extends GetxController {
       userAccessToken = data.results['access_token'];
       userTokenType = data.results['token_type'];
       expiresIn = data.results['expires_in'].toString();
-      Get.toNamed(Routes.profile);
+      Get.toNamed(Routes.homescreen);
     }, onError: (err) {
       Navigator.of(Get.context, rootNavigator: true).pop('dialog');
       Get.snackbar(

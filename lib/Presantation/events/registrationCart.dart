@@ -4,6 +4,7 @@ import 'package:skedaddle/Common/Button.dart';
 import 'package:skedaddle/Common/textField.dart';
 import 'package:skedaddle/Common/themeBody.dart';
 import 'package:skedaddle/Config/app_pages.dart';
+import 'package:skedaddle/Utils/constants.dart';
 
 class RegistrationCart extends StatefulWidget {
   @override
@@ -38,8 +39,13 @@ class _RegistrationCartState extends State<RegistrationCart> {
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(width: 10,),
-                    Icon(Icons.edit,color: Colors.white,)
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Icon(
+                      Icons.edit,
+                      color: Colors.white,
+                    )
                   ],
                 ),
               ),
@@ -65,35 +71,38 @@ class _RegistrationCartState extends State<RegistrationCart> {
               const Divider(
                 color: Colors.white,
               ),
-              Row(
-                children: [
-                  Container(
-                      width: MediaQuery.of(context).size.width / 2.5,
-                      child: Text(
-                        "Dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard and typesetting",
-                        style: TextStyle(color: Colors.white, fontSize: 15.0),
-                      )),
-                  SizedBox(
-                    width: 15.0,
-                  ),
-                  Container(
-                      width: MediaQuery.of(context).size.width / 5.5,
-                      child: Text(
-                        "\$38.75",
-                        style:
-                            TextStyle(color: Color(0xFF04EFB0), fontSize: 20.0),
-                      )),
-                  SizedBox(
-                    width: 15.0,
-                  ),
-                  Container(
-                      width: MediaQuery.of(context).size.width / 5.5,
-                      child: Text(
-                        "\$38.57 ",
-                        style:
-                            TextStyle(color: Color(0xFF04EFB0), fontSize: 20.0),
-                      )),
-                ],
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                        width: MediaQuery.of(context).size.width / 2.5,
+                        child: Text(
+                          "Dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard and typesetting",
+                          style: TextStyle(color: Colors.white, fontSize: 15.0),
+                        )),
+                    SizedBox(
+                      width: 15.0,
+                    ),
+                    Container(
+                        width: MediaQuery.of(context).size.width / 5.5,
+                        child: Text(
+                          "\$38.75",
+                          style: TextStyle(
+                              color: Color(0xFF04EFB0), fontSize: 20.0),
+                        )),
+                    SizedBox(
+                      width: 15.0,
+                    ),
+                    Container(
+                        width: MediaQuery.of(context).size.width / 5.5,
+                        child: Text(
+                          "\$38.57 ",
+                          style: TextStyle(
+                              color: Color(0xFF04EFB0), fontSize: 20.0),
+                        )),
+                  ],
+                ),
               ),
               SizedBox(
                 height: 20.0,
@@ -104,35 +113,38 @@ class _RegistrationCartState extends State<RegistrationCart> {
               SizedBox(
                 height: 20.0,
               ),
-              Row(
-                children: [
-                  Container(
-                      width: MediaQuery.of(context).size.width / 2.5,
-                      child: Text(
-                        "Dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard and typesetting",
-                        style: TextStyle(color: Colors.white, fontSize: 15.0),
-                      )),
-                  SizedBox(
-                    width: 15.0,
-                  ),
-                  Container(
-                      width: MediaQuery.of(context).size.width / 5.5,
-                      child: Text(
-                        "\$38.57",
-                        style:
-                            TextStyle(color: Color(0xFF04EFB0), fontSize: 20.0),
-                      )),
-                  SizedBox(
-                    width: 15.0,
-                  ),
-                  Container(
-                      width: MediaQuery.of(context).size.width / 5.5,
-                      child: Text(
-                        "\$38.57 ",
-                        style:
-                            TextStyle(color: Color(0xFF04EFB0), fontSize: 20.0),
-                      )),
-                ],
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                        width: MediaQuery.of(context).size.width / 2.5,
+                        child: Text(
+                          "Dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard and typesetting",
+                          style: TextStyle(color: Colors.white, fontSize: 15.0),
+                        )),
+                    SizedBox(
+                      width: 15.0,
+                    ),
+                    Container(
+                        width: MediaQuery.of(context).size.width / 5.5,
+                        child: Text(
+                          "\$38.57",
+                          style: TextStyle(
+                              color: Color(0xFF04EFB0), fontSize: 20.0),
+                        )),
+                    SizedBox(
+                      width: 15.0,
+                    ),
+                    Container(
+                        width: MediaQuery.of(context).size.width / 5.5,
+                        child: Text(
+                          "\$38.57 ",
+                          style: TextStyle(
+                              color: Color(0xFF04EFB0), fontSize: 20.0),
+                        )),
+                  ],
+                ),
               ),
               SizedBox(
                 height: 20.0,
@@ -209,10 +221,11 @@ class _RegistrationCartState extends State<RegistrationCart> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  "Payment Radio Button",
-                  style: TextStyle(color: Color(0xFF04EFB0), fontSize: 24.0),
+                  "Payment Methodes",
+                  style: TextStyle(color: Color(0xFF04EFB0)),
                 ),
               ),
+              Image.asset('assets/images/paypal-123.png'),
               SizedBox(
                 height: 20.0,
               ),
