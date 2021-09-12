@@ -20,8 +20,8 @@ class loginPage extends StatefulWidget {
 class _loginPageState extends State<loginPage> {
   final LoginController loginController = Get.find();
   final remark = TextEditingController();
-  final emailControl = TextEditingController(text:'jonedev.20@gmail.com');
-  final pwControl = TextEditingController(text:'12345678');
+  final emailControl = TextEditingController(text: 'jonedev.20@gmail.com');
+  final pwControl = TextEditingController(text: '12345678');
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,10 @@ class _loginPageState extends State<loginPage> {
                     alignment: Alignment.topCenter,
                     child: Container(
                         width: getWidth(context) / 2,
-                        child: Image.asset('assets/images/logo.png', fit: BoxFit.fitHeight,)),
+                        child: Image.asset(
+                          'assets/images/logo.png',
+                          fit: BoxFit.fitHeight,
+                        )),
                   )),
               Expanded(
                 flex: 8,
@@ -69,10 +72,51 @@ class _loginPageState extends State<loginPage> {
                           ),
                           Text(
                             "Please sign in to continue",
-                            style: TextStyle(color: UiWhiteColor,fontSize: 16.0),
+                            style:
+                                TextStyle(color: UiWhiteColor, fontSize: 16.0),
                           ),
                           SizedBox(
                             height: 30,
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                // border: Border.all(
+                                //   color: UiWhiteColor,
+                                // ),
+                                color: Colors.white30,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10))),
+                            height: 60.0,
+                            width: MediaQuery.of(context).size.width,
+                            child: DropdownButtonHideUnderline(
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 16.0),
+                                child: DropdownButton<String>(
+                                  hint: Text(
+                                    'Login Type',
+                                    style: TextStyle(
+                                        color: UiWhiteColor, fontSize: 16.0),
+                                  ),
+                                  dropdownColor: UiWhiteColor,
+                                  focusColor: Colors.blue,
+                                  items: <String>['Admin', 'Technician', 'User']
+                                      .map((String value) {
+                                    return DropdownMenuItem<String>(
+                                      value: value,
+                                      child: Text(value),
+                                    );
+                                  }).toList(),
+                                  onChanged: (String newValue) {
+                                    setState(() {
+                                      //  value = newValue;
+                                    });
+                                  },
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
                           ),
                           UiFormText(
                               hint: 'Email',
@@ -99,29 +143,30 @@ class _loginPageState extends State<loginPage> {
                               name: 'Login',
                               onClick: () {
                                 if (emailControl.text.isEmpty) {
-                                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                                    backgroundColor:Colors.red,
+                                  ScaffoldMessenger.of(context)
+                                      .showSnackBar(SnackBar(
+                                    backgroundColor: Colors.red,
                                     behavior: SnackBarBehavior.floating,
                                     content: Text('Please fill username'),
                                   ));
-                                }
-                                else if (pwControl.text.isEmpty) {
-                                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                                    backgroundColor:Colors.red,
+                                } else if (pwControl.text.isEmpty) {
+                                  ScaffoldMessenger.of(context)
+                                      .showSnackBar(SnackBar(
+                                    backgroundColor: Colors.red,
                                     behavior: SnackBarBehavior.floating,
                                     content: Text('Please fill password'),
                                   ));
-                                }
-                                else if (emailControl.text.isNotEmpty &&
+                                } else if (emailControl.text.isNotEmpty &&
                                     pwControl.text.isNotEmpty) {
                                   loginController.callAPI(
                                       emailControl.text, pwControl.text);
-                                }
-                                else{
-                                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                                    backgroundColor:Colors.red,
+                                } else {
+                                  ScaffoldMessenger.of(context)
+                                      .showSnackBar(SnackBar(
+                                    backgroundColor: Colors.red,
                                     behavior: SnackBarBehavior.floating,
-                                    content: Text('Please fill details and try again'),
+                                    content: Text(
+                                        'Please fill details and try again'),
                                   ));
                                 }
                               },
@@ -177,18 +222,22 @@ class _loginPageState extends State<loginPage> {
                             children: [
                               Container(
                                 height: 50,
-                                 width: 50,
-                                 child: Image.asset('assets/icons/facebbok.png',),
-
+                                width: 50,
+                                child: Image.asset(
+                                  'assets/icons/facebbok.png',
+                                ),
                                 decoration: BoxDecoration(
                                     color: Colors.red,
-                                    borderRadius: BorderRadius.all(Radius.circular(30))),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(30))),
                               ),
                               SizedBox(width: 10),
                               Container(
                                 height: 50,
                                 width: 50,
-                                  child: Image.asset('assets/icons/google.png',),
+                                child: Image.asset(
+                                  'assets/icons/google.png',
+                                ),
                                 decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius:
