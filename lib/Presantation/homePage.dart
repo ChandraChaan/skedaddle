@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:skedaddle/Application/Controller/FrontEventsController.dart';
 import 'package:skedaddle/Config/app_pages.dart';
+import 'package:skedaddle/Presantation/adminPage.dart';
 import 'package:skedaddle/Presantation/profile.dart';
 import 'package:skedaddle/Presantation/widgets/connections.dart';
 import 'package:skedaddle/Presantation/widgets/mainEvents.dart';
@@ -28,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
     Connections(),
     EventsPage(),
     mainEvents(),
-    WinnersPage(),
+    AdminPage(),
     Profile()
   ];
 
@@ -160,7 +161,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     title: Text('Challenges', style: textstyle),
                     onTap: () {
-                      Get.toNamed(Routes.Winners);
+                      Get.toNamed(Routes.AdminPage);
                       // Update the state of the app.
                       // ...
                     },
@@ -288,7 +289,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 onTap: () {
                                                   // Get.toNamed(
                                                   //     Routes.upcomingEvents);
-                                                  Get.toNamed(Routes.eventsPage);
+                                                  Get.toNamed(
+                                                      Routes.eventsPage);
                                                 },
                                                 child: Padding(
                                                   padding:

@@ -1,5 +1,7 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:skedaddle/Application/Binding/MainBinding.dart';
+import 'package:skedaddle/Presantation/adminPage.dart';
+import 'package:skedaddle/Presantation/adminPage.dart';
 import 'package:skedaddle/Presantation/events/choosePackage.dart';
 import 'package:skedaddle/Presantation/events/events.dart';
 import 'package:skedaddle/Presantation/events/register.dart';
@@ -15,53 +17,32 @@ import 'package:skedaddle/Presantation/profile.dart';
 import 'package:skedaddle/Presantation/signup.dart';
 import 'package:skedaddle/Presantation/widgets/connections.dart';
 import 'package:skedaddle/Presantation/widgets/mainEvents.dart';
-import 'package:skedaddle/Presantation/widgets/winners.dart';
 
 part 'app_route.dart';
-class AppPages {
-  static const INITIAL = Routes.getStartedImage;
-  static final routes = [
-    GetPage(
-        name: Routes.DEFAULT,
-        page: () => HomeScreen()),
-    GetPage(
-        name: Routes.getStartedImage,
-        page: () => GetStartedImage()),
-    GetPage(
-        name: Routes.register,
-        page: () => Register()),
-    GetPage(
-        name: Routes.login,
-        page: () => loginPage(),binding: MainBinding()),
-    GetPage(
-        name: Routes.regCart,
-        page: () => RegistrationCart()),
-    GetPage(
-        name: Routes.upcomingEvents,
-        page: () => UpcomingEventsInfo()),
-    GetPage(
-        name: Routes.signup,
-        page: () => SignUp(), binding: MainBinding()),
-    GetPage(
-        name: Routes.forgetPassword,
-        page: () => forgetPassword()),
-    GetPage(
-        name: Routes.eventsPage,
-        page: () => EventsPage()),
-    GetPage(
-        name: Routes.registernow,
-        page: () => RegisterNow()),
-    GetPage(
-        name: Routes.successpayment,
-        page: () => SuccessPayment()),
-    GetPage(
-        name: Routes.profile,
-        page: () => Profile()),
-    GetPage(name: Routes.homescreen,page: () => HomeScreen(), binding: MainBinding()),
-    GetPage(name: Routes.connections,page: () => Connections()),
-    GetPage(name: Routes.mainEvents,page: () => mainEvents()),
-    GetPage(name: Routes.Winners,page: () => WinnersPage()),
-    GetPage(name: Routes.choosePackagepage,page: () => choosePackagepage()),
 
+class AppPages {
+  static const INITIAL = Routes.homescreen;
+  static final routes = [
+    GetPage(name: Routes.DEFAULT, page: () => HomeScreen()),
+    GetPage(name: Routes.getStartedImage, page: () => GetStartedImage()),
+    GetPage(name: Routes.register, page: () => Register()),
+    GetPage(
+        name: Routes.login, page: () => loginPage(), binding: MainBinding()),
+    GetPage(name: Routes.regCart, page: () => RegistrationCart()),
+    GetPage(name: Routes.upcomingEvents, page: () => UpcomingEventsInfo()),
+    GetPage(name: Routes.signup, page: () => SignUp(), binding: MainBinding()),
+    GetPage(name: Routes.forgetPassword, page: () => forgetPassword()),
+    GetPage(name: Routes.eventsPage, page: () => EventsPage()),
+    GetPage(name: Routes.registernow, page: () => RegisterNow()),
+    GetPage(name: Routes.successpayment, page: () => SuccessPayment()),
+    GetPage(name: Routes.profile, page: () => Profile()),
+    GetPage(
+        name: Routes.homescreen,
+        page: () => HomeScreen(),
+        binding: MainBinding()),
+    GetPage(name: Routes.connections, page: () => Connections()),
+    GetPage(name: Routes.mainEvents, page: () => mainEvents()),
+    GetPage(name: Routes.AdminPage, page: () => AdminPage()),
+    GetPage(name: Routes.choosePackagepage, page: () => choosePackagepage()),
   ];
 }
