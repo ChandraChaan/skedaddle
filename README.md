@@ -1,16 +1,40 @@
-# skedaddle
+# Skedaddle
 
-A new Flutter project.
+Flutter app for challenge events: browse upcoming events, pick a package, register, pay, and follow winners and connections. Built in 2021.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Sign up, log in and password reset
+- Event listing, event details and upcoming events
+- Package selection, registration cart and payment confirmation
+- Profile with challenges, stats, followers and following
+- Winners and connections widgets on the home screen
+- Admin page
 
-A few resources to get you started if this is your first Flutter project:
+## Architecture
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Layered structure with GetX for state, routing and dependency injection, and Dio for networking:
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+lib/
+  Application/     GetX bindings and controllers (login, sign-up, events, cart)
+  Domain/          data classes
+  Infrastructure/  request parameters
+  Network/         Dio client, error handling, logging, URL config
+  Provider/        repository and adapters
+  Presantation/    screens and widgets
+  Config/          routes and pages
+```
+
+## Run
+
+```bash
+flutter pub get
+flutter run
+```
+
+The API base URL lives in `lib/Network/NetworkURLConfig.dart`; point it at your own backend.
+
+## License
+
+MIT
